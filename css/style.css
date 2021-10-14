@@ -1,0 +1,154 @@
+:root {
+  --color-primary-moderate-violet: hsl(263, 55%, 52%);
+  --color-primary-very-dark-grayish-blue: hsl(217, 19%, 35%);
+  --color-primary-very-dark-blackish-blue: hsl(219, 29%, 14%);
+  --color-neutral-light-gray: hsl(0, 0%, 81%);
+  --color-neutral-light-grayish-blue: hsl(210, 46%, 95%); }
+
+/*
+Note for text colors:
+
+1. "Verified Graduate" has the same color as the person's name with 50% opacity
+2.  Review paragraphs inside the quotations have the same color as well, but are at 70% opacity
+*/
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+
+body {
+  height: 100%;
+  width: 100vw;
+  background-color: var(--color-neutral-light-grayish-blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Barlow Semi Condensed", sans-serif; }
+
+main {
+  height: 100vh;
+  width: 144rem;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  @media (max-width: 1133px) {
+    main {
+      height: 100%;
+      width: 375px;
+      padding: 5rem 2.5rem; } }
+
+.component {
+  width: 109.5rem;
+  display: grid;
+  grid-template-rows: repeat(2, 27rem);
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2rem; }
+  @media (max-width: 1133px) {
+    .component {
+      height: 100%;
+      width: 375px;
+      grid-template-rows: 40rem 22rem 22rem 36rem 40rem;
+      grid-template-columns: 350px; } }
+  .component__card {
+    padding: 3rem;
+    padding-top: 2rem;
+    padding-right: 4rem;
+    border-radius: 1rem;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.295); }
+    @media (max-width: 1133px) {
+      .component__card {
+        width: 350px; } }
+    .component__card--top {
+      display: flex;
+      align-items: center; }
+    .component__card .top__img {
+      margin-right: 1.5rem; }
+      .component__card .top__img--photo {
+        height: 4rem;
+        width: 4rem;
+        border-radius: 50%;
+        border: 2px solid rgba(255, 255, 255, 0.5); }
+    .component__card .top__info--name {
+      font-size: 1.5rem;
+      color: white; }
+    .component__card .top__info--status {
+      font-size: 1.4rem;
+      color: rgba(255, 255, 255, 0.5); }
+    .component__card .mid__text {
+      font-size: 2rem;
+      position: relative;
+      z-index: 10; }
+    .component__card .bot__text {
+      font-size: 1.3rem;
+      color: rgba(255, 255, 255, 0.7);
+      line-height: 1.3; }
+
+.quotes {
+  position: absolute;
+  top: 0;
+  right: 10rem;
+  z-index: 5; }
+  @media (max-width: 1133px) {
+    .quotes {
+      right: 2rem; } }
+
+.card-1 {
+  grid-row: 1/2;
+  grid-column: 1/3;
+  background-color: var(--color-primary-moderate-violet);
+  padding-top: 2rem;
+  padding-right: 3rem;
+  position: relative; }
+  @media (max-width: 1133px) {
+    .card-1 {
+      padding-right: 3rem;
+      grid-row: 1/2;
+      grid-column: 1/2; } }
+
+.card-2 {
+  grid-row: 1/2;
+  grid-column: 3/4;
+  background-color: var(--color-primary-very-dark-grayish-blue);
+  padding-top: 2rem; }
+  @media (max-width: 1133px) {
+    .card-2 {
+      grid-row: 2/3;
+      grid-column: 1/2; } }
+
+.card-3 {
+  grid-row: 2/3;
+  grid-column: 1/2;
+  background-color: white;
+  padding-right: 5rem; }
+  @media (max-width: 1133px) {
+    .card-3 {
+      grid-row: 3/4;
+      grid-column: 1/2; } }
+
+.card-4 {
+  grid-row: 2/3;
+  grid-column: 2/4;
+  background-color: var(--color-primary-very-dark-blackish-blue); }
+  @media (max-width: 1133px) {
+    .card-4 {
+      grid-row: 4/5;
+      grid-column: 1/2; } }
+
+.card-5 {
+  grid-row: 1/3;
+  grid-column: 4/5;
+  background-color: white; }
+  @media (max-width: 1133px) {
+    .card-5 {
+      grid-row: 5/6;
+      grid-column: 1/2; } }
